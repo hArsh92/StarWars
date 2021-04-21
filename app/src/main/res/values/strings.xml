@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">StarWars Tournament</string>
+    <string name="points_table">Points Table</string>
+    <string name="matches">Matches</string>
+</resources>

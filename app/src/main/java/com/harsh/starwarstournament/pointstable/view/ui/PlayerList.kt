@@ -1,0 +1,25 @@
+package com.harsh.starwarstournament.pointstable.view.ui
+
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.harsh.starwarstournament.pointstable.view.model.Player
+
+@Composable fun PlayerList(
+    players: List<Player>,
+    onItemClick: (Player) -> Unit
+) {
+    LazyColumn(
+        modifier = Modifier
+            .padding(vertical = 8.dp)
+            .fillMaxWidth()
+    ) {
+        items(items = players) { player ->
+            PlayerCard(player) { onItemClick(player) }
+        }
+    }
+}
